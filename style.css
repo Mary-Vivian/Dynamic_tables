@@ -91,8 +91,6 @@ td[contenteditable="true"]:empty:before {
     }
     body{
     font-size: 1.5rem;
-        width: 90%;
-        height: 200vh;
         padding-left: 7%;
       }
     #addBtn{
@@ -102,13 +100,4 @@ td[contenteditable="true"]:empty:before {
 #Generatebtn{
    font-size: 15px;
   }
-}
-
-@media only screen and (min-width: 768px) {
-}
-@media only screen and (min-width: 992px) {
-    
-}
-@media only screen and (min-width: 1200px) {
-   
 }
