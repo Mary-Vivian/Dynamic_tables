@@ -110,8 +110,6 @@ td[contenteditable="true"]:empty:before {
     }
     body{
     font-size: 1.5rem;
-        width: 90%;
-        height: 200vh;
         padding-left: 7%;
       }
     #addBtn{
@@ -124,9 +122,57 @@ td[contenteditable="true"]:empty:before {
 }
 
 @media only screen and (min-width: 768px) {
+    .content {
+        flex-wrap: wrap;
+        flex-direction: row;
+        
+        justify-content: c;
+        width: 100%;
+        padding-left: 60px;
+        height: 95%;
+        background-color: #dad8db;
+        /* border: 2rem solid #161717; */
+        border-radius: 1rem;
+    } 
+#addBtn{
+    background-color: red;
+    color: white;
+}
 }
 @media only screen and (min-width: 992px) {
+    .content {
+        flex-wrap: wrap;
+        flex-direction: row;
+        
+        justify-content: c;
+        width: 100%;
+        padding-left: 60px;
+        height: 95%;
+        background-color: #dad8db;
+        /* border: 2rem solid #161717; */
+        border-radius: 1rem;
+    } 
+#addBtn{
+    background-color: red;
+    color: white;
+}
     
 }
 @media only screen and (min-width: 1200px) {
+    .content {
+        flex-wrap: wrap;
+        flex-direction: row;
+        
+        justify-content: c;
+        width: 100%;
+        padding-left: 60px;
+        height: 95%;
+        background-color: #dad8db;
+        /* border: 2rem solid #161717; */
+        border-radius: 1rem;
+    } 
+#addBtn{
+    background-color: red;
+    color: white;
+}
 }
