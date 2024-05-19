@@ -9,6 +9,7 @@ function generateTable() {
             const cell = row.insertCell();
             cell.contentEditable = true;
             cell.setAttribute('data-placeholder', ' ');
+            cell.setAttribute('data-placeholder', '');s
         }
     }
 }
