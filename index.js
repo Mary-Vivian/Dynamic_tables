@@ -12,3 +12,14 @@ function generateTable() {
         }
     }
 }
+
+function addRow() {
+    const table = document.getElementById('dynamicTable');
+    const columns = table.rows[0].cells.length;
+    const row = table.insertRow();
+    for (let i = 0; i < columns; i++) {
+        const cell = row.insertCell();
+        cell.contentEditable = true;
+        cell.setAttribute('data-placeholder', 'Edit...');
+    }
+}
