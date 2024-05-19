@@ -3,9 +3,6 @@ body {
     font-family: "Poppins", sans-serif;
     display: flex;
     background-color:  #1f2937;
-    padding-left: 250px;
-    margin-top: 60px;
-    height: 70vh;
     background-color: #dad8db ;
     padding-left:  160px;
     margin-top: 30px;
@@ -175,4 +172,4 @@ td[contenteditable="true"]:empty:before {
     background-color: red;
     color: white;
 }
-}
+}  height: 70vh;
