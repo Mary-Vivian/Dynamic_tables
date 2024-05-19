@@ -23,7 +23,6 @@ function addRow() {
         cell.setAttribute('data-placeholder', 'Edit...');
     }
 }
-<<<<<<< HEAD
 
 function deleteRow() {
     const table = document.getElementById('dynamicTable');
@@ -32,7 +31,7 @@ function deleteRow() {
     }
 }
 
-=======
+
 function addColumn() {
     const table = document.getElementById('dynamicTable');
     for (let i = 0; i < table.rows.length; i++) {
@@ -41,4 +40,11 @@ function addColumn() {
         cell.setAttribute('data-placeholder', 'Edit...');
     }
 }
->>>>>>> feature4/js
+function deleteColumn() {
+    const table = document.getElementById('dynamicTable');
+    if (table.rows[0].cells.length > 0) {
+        for (let i = 0; i < table.rows.length; i++) {
+            table.rows[i].deleteCell(-1);
+        }
+    }
+}
