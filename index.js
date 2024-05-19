@@ -8,7 +8,7 @@ function generateTable() {
         for (let j = 0; j < columns; j++) {
             const cell = row.insertCell();
             cell.contentEditable = true;
-            cell.setAttribute('data-placeholder', 'Edit');
+            cell.setAttribute('data-placeholder', ' ');
         }
     }
 }
@@ -20,7 +20,7 @@ function addRow() {
     for (let i = 0; i < columns; i++) {
         const cell = row.insertCell();
         cell.contentEditable = true;
-        cell.setAttribute('data-placeholder', 'Edit...');
+        cell.setAttribute('data-placeholder', '');
     }
 }
 
@@ -37,7 +37,7 @@ function addColumn() {
     for (let i = 0; i < table.rows.length; i++) {
         const cell = table.rows[i].insertCell();
         cell.contentEditable = true;
-        cell.setAttribute('data-placeholder', 'Edit...');
+        cell.setAttribute('data-placeholder', '');
     }
 }
 function deleteColumn() {
