@@ -23,6 +23,7 @@ function addRow() {
         cell.setAttribute('data-placeholder', 'Edit...');
     }
 }
+<<<<<<< HEAD
 
 function deleteRow() {
     const table = document.getElementById('dynamicTable');
@@ -31,3 +32,13 @@ function deleteRow() {
     }
 }
 
+=======
+function addColumn() {
+    const table = document.getElementById('dynamicTable');
+    for (let i = 0; i < table.rows.length; i++) {
+        const cell = table.rows[i].insertCell();
+        cell.contentEditable = true;
+        cell.setAttribute('data-placeholder', 'Edit...');
+    }
+}
+>>>>>>> feature4/js
