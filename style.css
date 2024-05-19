@@ -6,7 +6,10 @@ body {
     padding-left: 250px;
     margin-top: 60px;
     height: 70vh;
-  
+    background-color: #dad8db ;
+    padding-left:  160px;
+    margin-top: 30px;
+
 }
 .container {
     text-align: center;
@@ -31,24 +34,23 @@ input {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    width: 60%;
-    padding-left: 40px;
+    width: 70%;
+    padding-left: 20px;
     height: 95%;
-    background-color: #dad8db;
-    /* border: 2rem solid #161717; */
+    background-color:white;
+    border: 2rem solid #161717;
     border-radius: 1rem;
 }
-  
 #header{
     font-size: 40px;
     padding-bottom: 60px;
+    color: #10b981;
 }
 #Generatebtn{
     border-radius: 16px;
     margin: 1rem auto;
     display: inline;
-    background-color: #10b981;;
-    color: #100f12d8;
+    background-color: #10b981;
     width: 200px;
     height: 40px;
     font-weight: 700;
@@ -59,6 +61,7 @@ input {
 
 
 }
+
 table {
     margin: 0 auto;
     border-collapse: collapse;
@@ -94,5 +97,36 @@ td[contenteditable="true"]:empty:before {
         /* border: 2rem solid #161717; */
         border-radius: 1rem;
     } 
+#addBtn{
+    background-color: red;
+    color: white;
+}
+}
+
+@media only screen and (max-width: 480px)  {
+    .content {
+      border: 0.5rem solid #161717;
+      justify-content: space-around;
+    }
+    body{
+    font-size: 1.5rem;
+        width: 90%;
+        height: 200vh;
+        padding-left: 7%;
+      }
+    #addBtn{
+        flex-direction: row;
+    }
     
+#Generatebtn{
+   font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+    
+}
+@media only screen and (min-width: 1200px) {
 }
