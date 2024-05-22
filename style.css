@@ -14,6 +14,8 @@ body {
 .controls, .row-column-controls {
     margin: 10px 0;
 }
+
+
 label {
     margin-right: 10px;
 }
@@ -76,11 +78,30 @@ td[contenteditable="true"]:empty:before {
     content: attr(data-placeholder);
     color: #ccc;
     position: absolute;
+    border: none;
+
  }
  #addBtn{
-    background-color: red;
+    background-color: #10b981;
     color: white;
+    border-radius: 10px;
+    height: 30px;
+    border: none;
+    width: 90px;
+
 }
+#delBtn{
+    background-color: #cf1515;
+    color: white;
+    
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+}
+.row-column-controls{
+    gap:100px;
+}
+
 
 @media screen and (min-width:375px) and (max-width:600px){
     body {
