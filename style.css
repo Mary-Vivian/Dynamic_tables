@@ -3,12 +3,9 @@ body {
     font-family: "Poppins", sans-serif;
     display: flex;
     background-color:  #1f2937;
-<<<<<<< HEAD
     padding-left: 250px;
     margin-top: 60px;
     height: 70%;
-=======
->>>>>>> feature5/js
     background-color: #dad8db ;
     padding-left:  160px;
     margin-top: 30px;
@@ -108,16 +105,7 @@ td[contenteditable="true"]:empty:before {
         /* border: 2rem solid #161717; */
         border-radius: 1rem;
     } 
-#addBtn{
-    background-color: red;
-    color: white;
-}
-        width: 70%;
-        padding-left: 10%;
-        padding-right: 10%;
-        height: 70%;   
-    }
-    
+
     #Generatebtn{
         border-radius: 3px;
         margin: 0%;
@@ -133,6 +121,7 @@ td[contenteditable="true"]:empty:before {
        font-size: smaller;
     }
 }
+
 
 
 
