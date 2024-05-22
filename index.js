@@ -11,6 +11,7 @@ function generateTable() {
             cell.setAttribute('data-placeholder', '');
         }
     }
+    
 }
 document.getElementById('downloadAsCSV').addEventListener('click', function() {
     var table = document.querySelector('#myTable'); // Replace #myTable with your table's ID
@@ -51,7 +52,11 @@ function deleteRow() {
     const table = document.getElementById('dynamicTable');
     if (table.rows.length > 0){
         table.deleteRow(-1);
+    if (table.rows.length > 0) {
+        table.deleteRow(table.rows.length-1);
+
     }
+}
 }
 
 function addColumn() {
@@ -62,6 +67,7 @@ function addColumn() {
         cell.setAttribute('data-placeholder', '');
     }
 }
+
 function deleteColumn() {
     const table = document.getElementById('dynamicTable');
     if (table.rows[0].cells.length > 0) {
