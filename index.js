@@ -11,6 +11,7 @@ function generateTable() {
             cell.setAttribute('data-placeholder', '');
         }
     }
+    
 }
 
 function addRow() {
@@ -27,7 +28,7 @@ function addRow() {
 function deleteRow() {
     const table = document.getElementById('dynamicTable');
     if (table.rows.length > 0) {
-        table.deleteRow(-1);
+        table.deleteRow(table.rows.length-1);
     }
 }
 
@@ -40,6 +41,7 @@ function addColumn() {
         cell.setAttribute('data-placeholder', '');
     }
 }
+
 function deleteColumn() {
     const table = document.getElementById('dynamicTable');
     if (table.rows[0].cells.length > 0) {
