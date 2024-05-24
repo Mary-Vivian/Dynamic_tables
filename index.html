@@ -10,10 +10,13 @@
     <div class="content">
         <h1 id="header">Dynamic Table Generator</h1>
         <div class="controls">
+          
             <label for="rows">Rows:</label>
-            <input type="number" id="rows" min="1" value="3">
+            <input type="number" id="rows" min="1" value="2">
+            
             <label for="columns">Columns:</label>
-            <input type="number" id="columns" min="1" value="3">
+            <input type="number" id="columns" min="1" value="2">
+            
             <button onclick="generateTable()" id="Generatebtn">Generate Table</button>
         </div>
         <div class="table-container">
@@ -21,10 +24,17 @@
         </div>
         <br>
         <div class="row-column-controls">
+<<<<<<< HEAD
             <button onclick="addRow()" id="addrow">Add Row</button>
             <button onclick="deleteRow()"id="deleteBtn">Delete Row</button>
             <button onclick="addColumn()"id="addcolumn">Add Column</button>
             <button onclick="deleteColumn()"id="deleteColumn">Delete Column</button>
+=======
+            <button onclick="addRow()" id="addBtn">Add Row</button>
+            <button onclick="deleteRow()"id="delBtn">Delete Row</button>
+            <button onclick="addColumn()"id="addBtn">Add Column</button>
+            <button onclick="deleteColumn()"id="delBtn">Delete Column</button>
+>>>>>>> feature1/landingpage
         </div>
     </div>
     <script src="index.js"></script>
