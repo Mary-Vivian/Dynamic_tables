@@ -16,11 +16,8 @@ body {
 } 
 .row-column-controls {
     margin: 10px 0;
-<<<<<<< HEAD
+
     gap: 9px;
-=======
-   
->>>>>>> feature1/landingpage
 }
 
 
@@ -93,7 +90,6 @@ td[contenteditable="true"]:empty:before {
     border: none;
 
  }
-<<<<<<< HEAD
  #addrow{
     background-color: #10b981;
  }
@@ -106,8 +102,6 @@ td[contenteditable="true"]:empty:before {
  #deleteColumn{
     background-color: #F2391D;
  }
-
-=======
  #addBtn{
     background-color: #10b981;
     color: white;
@@ -128,7 +122,6 @@ td[contenteditable="true"]:empty:before {
 .row-column-controls{
     gap:100px;
 }
->>>>>>> feature1/landingpage
 
 
 @media screen and (min-width:375px) and (max-width:600px){
