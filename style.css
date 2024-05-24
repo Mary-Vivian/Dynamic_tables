@@ -13,6 +13,7 @@ body {
 }
 .controls, .row-column-controls {
     margin: 10px 0;
+    gap: 9px;
 }
 label {
     margin-right: 10px;
@@ -77,10 +78,20 @@ td[contenteditable="true"]:empty:before {
     color: #ccc;
     position: absolute;
  }
- #addBtn{
-    background-color: red;
-    color: white;
-}
+ #addrow{
+    background-color: #10b981;
+ }
+ #deleteBtn{
+    background-color: #F2391D;
+ }
+ #addcolumn{
+    background-color: #10b981;
+ }
+ #deleteColumn{
+    background-color: #F2391D;
+ }
+
+
 
 @media screen and (min-width:375px) and (max-width:600px){
     body {
@@ -97,7 +108,7 @@ td[contenteditable="true"]:empty:before {
         padding-right: 10%;
         height: 70%;   
     }
-    
+
     #Generatebtn{
         border-radius: 3px;
         margin: 0%;

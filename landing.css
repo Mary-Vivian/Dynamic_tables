@@ -25,11 +25,12 @@
 }
 button{
      background-color: aquamarine;
-     padding: 3px 3px;
+     padding: 5px 5px;
      width:100px ;
      height: 50px;
      margin-bottom: 40px;
-     border-radius: 30px;
+     border-radius: 50px;
+     font-size: large;
 }
 a{
     text-decoration: none;
