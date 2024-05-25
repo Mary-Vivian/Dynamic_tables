@@ -11,9 +11,7 @@ body {
 .container {
     text-align: center;
 }
-.controls{
 
-} 
 .row-column-controls {
     margin: 10px 0;
    
@@ -26,7 +24,6 @@ label {
 input {
     text-align: center;
     border-radius: 10px;
-    
     border:solid 4px  #10b981; ;
     width: 50px;
     padding: 4px 4px;
@@ -38,12 +35,7 @@ input {
     justify-content: space-around;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    width: 70%;
-    padding-left: 20px;
-    height: 95%;
-    background-color:white;
-    border: 2rem solid #161717;
+    padding-left: 30px;
     border-radius: 1rem;
 }
 #header{
@@ -54,16 +46,15 @@ input {
 #Generatebtn{
     border-radius: 16px;
     margin: 1rem auto;
-    /* display: inline; */
     background-color: #10b981;
-    width: 150px;
+    width: 130px;
     height: 40px;
     font-size: 15px;
     font-weight: 700;
     padding: 4px 4px;
-    border-radius: 4px;
-    border: none;
-   margin-left: 80px;
+     border: none;
+     color: white;
+
     
 }
 
@@ -143,7 +134,6 @@ td[contenteditable="true"]:empty:before {
     }
     
 }
-
 @media screen and (min-width:600px) and (max-width:800px){
     body {
         margin: 0px;
@@ -159,7 +149,6 @@ td[contenteditable="true"]:empty:before {
         padding-right: 10%;
         height: 70%;
     }
-
     #Generatebtn{
         border-radius: 3px;
         margin: 0%;
@@ -169,13 +158,18 @@ td[contenteditable="true"]:empty:before {
         border-radius: 1px;
         padding-left: 0px;
     }
-
     #header{
         padding-bottom: 10px;
        font-size: small;
     }
-    
 }
+
+
+
+
+
+
+
 
 
 

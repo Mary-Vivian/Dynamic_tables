@@ -11,30 +11,12 @@ function generateTable() {
             cell.setAttribute('data-placeholder', '');
         }
     }
-    
+    showButtons();
 }
-document.getElementById('downloadAsCSV').addEventListener('click', function() {
-    var table = document.querySelector('#myTable'); // Replace #myTable with your table's ID
-    var csvContent = "data:text/csv;charset=utf-8," + tableToCsv(table);
 
-    var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "table.csv");
-    document.body.appendChild(link); // Required for Firefox
-    link.click();
-});
-
-function tableToCsv(table) {
-    var rows = Array.from(table.querySelectorAll("tr"));
-    var headerCells = Array.from(rows[0].querySelectorAll("th"));
-
-    var csvRows = rows.slice(1).map(row => {
-        var cells = Array.from(row.querySelectorAll("td"));
-        return headerCells.map(headerCell => cells[headerCells.indexOf(headerCell)] || "").join(",");
-    });
-
-    return csvRows.join("\n") + "\n" + headerCells.map(headerCell => headerCell.textContent || "").join(",") + "\n";
+function showButtons() {
+    const buttonsContainer = document.getElementsByClassName('row-column-controls')[0];
+    buttonsContainer.style.display = 'block';
 }
 
 function addRow() {
@@ -46,25 +28,32 @@ function addRow() {
         cell.contentEditable = true;
         cell.setAttribute('data-placeholder', '');
     }
-}
-
-function deleteRow() {
-    const table = document.getElementById('dynamicTable');
-    if (table.rows.length > 0){
-        table.deleteRow(-1);
-    if (table.rows.length > 0) {
-        table.deleteRow(table.rows.length-1);
-
-    }
-}
+    showButtons();
 }
 
 function addColumn() {
     const table = document.getElementById('dynamicTable');
-    for (let i = 0; i < table.rows.length; i++){
+    for (let i = 0; i < table.rows.length; i++) {
         const cell = table.rows[i].insertCell();
         cell.contentEditable = true;
         cell.setAttribute('data-placeholder', '');
+    }
+    showButtons();
+}
+
+function showButtons() {
+    const buttons = document.getElementsByClassName('row-column-controls')[0].getElementsByTagName('button');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = 'inline-block';
+    }
+}
+function deleteRow() {
+    const table = document.getElementById('dynamicTable');
+    if (table.rows.length > 0) {
+        table.deleteRow(table.rows.length-1);
+        if (table.rows.length === 0) {
+            hideButtons();
+        }
     }
 }
 
@@ -74,29 +63,54 @@ function deleteColumn() {
         for (let i = 0; i < table.rows.length; i++) {
             table.rows[i].deleteCell(-1);
         }
+        if (table.rows[0].cells.length === 0) {
+            hideButtons();
+        }
     }
 }
-document.getElementById('downloadAsCSV').addEventListener('click', function() {
-    var table = document.querySelector('#myTable'); // Replace #myTable with your table's ID
-    var csvContent = "data:text/csv;charset=utf-8," + tableToCsv(table);
 
-    var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "table.csv");
-    document.body.appendChild(link); // Required for Firefox
-    link.click();
-});
-
-function tableToCsv(table) {
-    var rows = Array.from(table.querySelectorAll("tr"));
-    var headerCells = Array.from(rows[0].querySelectorAll("th"));
-
-    var csvRows = rows.slice(1).map(row => {
-        var cells = Array.from(row.querySelectorAll("td"));
-        return headerCells.map(headerCell => cells[headerCells.indexOf(headerCell)] || "").join(",");
-    });
-
-    return csvRows.join("\n") + "\n" + headerCells.map(headerCell => headerCell.textContent || "").join(",") + "\n";
+function hideButtons() {
+    const buttons = document.getElementsByClassName('row-column-controls')[0].getElementsByTagName('button');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = 'none';
+    }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    loadTable();
+});
+function saveTable() {
+    let tableData = [];
+    const table = document.getElementById('dynamicTable');
+    for (let i = 0; i < table.rows.length; i++) {
+        for (let j = 0; j < table.rows[i].cells.length; j++) {
+            tableData.push({
+                value: table.rows[i].cells[j].innerText,
+                row: i,
+                column: j
+            });
+        }
+    }
+    localStorage.setItem('tableData', JSON.stringify(tableData));
+}
+function loadTable() {
+    const tableData = JSON.parse(localStorage.getItem('tableData')) || [];
+    const table = document.getElementById('dynamicTable');
+    table.innerHTML = '';
+    let maxRows = Math.max(...tableData.map(data => data.row)) + 1;
+    let maxColumns = Math.max(...tableData.map(data => data.column)) + 1;
+    for (let i = 0; i < maxRows; i++) {
+        const row = table.insertRow();
+        for (let j = 0; j < maxColumns; j++) {
+            const cell = row.insertCell();
+          
+            const cellData = tableData.find(data => data.row === i && data.column === j);
+            if (cellData) {
+                cell.innerText = cellData.value;
+            } else {
+    
+                cell.innerText = '';
+            }
+        }
+    }
+}
