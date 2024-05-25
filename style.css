@@ -2,42 +2,42 @@ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     display: flex;
+    background-color:  #1f2937;
     background-color: #dad8db ;
     padding-left:  160px;
     margin-top: 30px;
-  
+
 }
 .container {
     text-align: center;
 }
-.controls, .row-column-controls {
+
+.row-column-controls {
     margin: 10px 0;
+   
 }
+
+
 label {
     margin-right: 10px;
 }
 input {
+    text-align: center;
+    border-radius: 10px;
+    border:solid 4px  #10b981; ;
     width: 50px;
-    margin-right: 10px;
-    border-radius: 30px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 4px 4px;
+    margin-right: 3px;
     font-family: "Poppins", sans-serif;
 }
 .content {
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    width: 70%;
-    padding-left: 20px;
-    height: 95%;
-    background-color:white;
-    border: 2rem solid #161717;
+    padding-left: 30px;
     border-radius: 1rem;
 }
-   
 #header{
     font-size: 40px;
     padding-bottom: 60px;
@@ -46,17 +46,16 @@ input {
 #Generatebtn{
     border-radius: 16px;
     margin: 1rem auto;
-    display: inline;
     background-color: #10b981;
-    width: 200px;
+    width: 130px;
     height: 40px;
+    font-size: 15px;
     font-weight: 700;
-    padding: 4px 8px;
-    border-radius: 4px;
-    border: none;
-    padding-left: 40px;
+    padding: 4px 4px;
+     border: none;
+     color: white;
 
-
+    
 }
 
 table {
@@ -78,26 +77,121 @@ td[contenteditable="true"]:empty:before {
     content: attr(data-placeholder);
     color: #ccc;
     position: absolute;
-}
-#addBtn{
-    background-color: red;
+    border: none;
+
+ }
+ #addBtn{
+    background-color: #10b981;
     color: white;
+    border-radius: 10px;
+    height: 30px;
+    border: none;
+    width: 90px;
+
+}
+#delBtn{
+    background-color: #cf1515;
+    color: white;
+    
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+}
+.row-column-controls{
+    gap:100px;
 }
 
-@media only screen and (max-width: 480px)  {
-    .content {
-      border: 0.5rem solid #161717;
-      justify-content: space-around;
+
+@media screen and (min-width:375px) and (max-width:600px){
+    body {
+        margin: 2px;
+        padding-left:  10%;
+        padding-right: 10%;
+        margin-top: 0px;
     }
-    body{
-    font-size: 1.5rem;
-        padding-left: 7%;
-      }
-    #addBtn{
+    .content {
+        flex-wrap: wrap;
         flex-direction: row;
+        width: 70%;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 70%;   
     }
     
-#Generatebtn{
-   font-size: 15px;
-  }
+    #Generatebtn{
+        border-radius: 3px;
+        margin: 0%;
+        flex-wrap: wrap;
+        font-weight: 50;
+        padding: 0px 0px;
+        border-radius: 1px;
+        padding-left: 0px;
+    }
+
+    #header{
+        padding-bottom: 0px;
+       font-size: smaller;
+    }
+    
 }
+@media screen and (min-width:600px) and (max-width:800px){
+    body {
+        margin: 0px;
+        padding-left:  10%;
+        padding-right: 10%;
+        margin-top: 0px;
+    }
+    .content {
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 70%;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 70%;
+    }
+    #Generatebtn{
+        border-radius: 3px;
+        margin: 0%;
+        flex-wrap: wrap;
+        font-weight: 50;
+        padding: 0px 0px;
+        border-radius: 1px;
+        padding-left: 0px;
+    }
+    #header{
+        padding-bottom: 10px;
+       font-size: small;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
