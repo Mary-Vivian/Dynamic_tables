@@ -12,29 +12,7 @@ function generateTable() {
         }
     }
 }
-document.getElementById('downloadAsCSV').addEventListener('click', function() {
-    var table = document.querySelector('#myTable'); // Replace #myTable with your table's ID
-    var csvContent = "data:text/csv;charset=utf-8," + tableToCsv(table);
 
-    var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "table.csv");
-    document.body.appendChild(link); // Required for Firefox
-    link.click();
-});
-
-function tableToCsv(table) {
-    var rows = Array.from(table.querySelectorAll("tr"));
-    var headerCells = Array.from(rows[0].querySelectorAll("th"));
-
-    var csvRows = rows.slice(1).map(row => {
-        var cells = Array.from(row.querySelectorAll("td"));
-        return headerCells.map(headerCell => cells[headerCells.indexOf(headerCell)] || "").join(",");
-    });
-
-    return csvRows.join("\n") + "\n" + headerCells.map(headerCell => headerCell.textContent || "").join(",") + "\n";
-}
 
 function addRow() {
     const table = document.getElementById('dynamicTable');
@@ -74,27 +52,7 @@ function deleteColumn() {
         }
     }
 }
-document.getElementById('downloadAsCSV').addEventListener('click', function() {
-    var table = document.querySelector('#myTable'); // Replace #myTable with your table's ID
-    var csvContent = "data:text/csv;charset=utf-8," + tableToCsv(table);
 
-    var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "table.csv");
-    document.body.appendChild(link); // Required for Firefox
-    link.click();
-});
 
-function tableToCsv(table) {
-    var rows = Array.from(table.querySelectorAll("tr"));
-    var headerCells = Array.from(rows[0].querySelectorAll("th"));
 
-    var csvRows = rows.slice(1).map(row => {
-        var cells = Array.from(row.querySelectorAll("td"));
-        return headerCells.map(headerCell => cells[headerCells.indexOf(headerCell)] || "").join(",");
-    });
-
-    return csvRows.join("\n") + "\n" + headerCells.map(headerCell => headerCell.textContent || "").join(",") + "\n";
-}
 
