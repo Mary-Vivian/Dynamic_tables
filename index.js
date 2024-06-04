@@ -8,7 +8,7 @@ function generateTable() {
         for (let j = 0; j < columns; j++) {
             const cell = row.insertCell();
             cell.contentEditable = true;
-            cell.setAttribute('data-placeholder', '');
+            cell.setAttribute('data-placeholder', 'Edit');
         }
     }
     showButtons();
@@ -19,6 +19,8 @@ function showButtons() {
     buttonsContainer.style.display = 'block';
 }
 
+
+
 function addRow() {
     const table = document.getElementById('dynamicTable');
     const columns = table.rows[0].cells.length;
@@ -28,7 +30,19 @@ function addRow() {
         cell.contentEditable = true;
         cell.setAttribute('data-placeholder', '');
     }
-    showButtons();
+
+    showButtons()
+}
+
+function deleteRow() {
+    const table = document.getElementById('dynamicTable');
+    if (table.rows.length > 0){
+        table.deleteRow(-1);
+    if (table.rows.length > 0) {
+        table.deleteRow(-1);
+        table.deleteRow(table.rows.length-1);
+    }
+}
 }
 
 function addColumn() {
@@ -56,7 +70,6 @@ function deleteRow() {
         }
     }
 }
-
 function deleteColumn() {
     const table = document.getElementById('dynamicTable');
     if (table.rows[0].cells.length > 0) {

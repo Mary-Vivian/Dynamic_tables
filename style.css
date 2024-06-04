@@ -14,7 +14,8 @@ body {
 
 .row-column-controls {
     margin: 10px 0;
-   
+
+    gap: 9px;
 }
 
 
@@ -80,6 +81,18 @@ td[contenteditable="true"]:empty:before {
     border: none;
 
  }
+ #addrow{
+    background-color: #10b981;
+ }
+ #deleteBtn{
+    background-color: #F2391D;
+ }
+ #addcolumn{
+    background-color: #10b981;
+ }
+ #deleteColumn{
+    background-color: #F2391D;
+ }
  #addBtn{
     background-color: #10b981;
     color: white;
@@ -117,7 +130,7 @@ td[contenteditable="true"]:empty:before {
         padding-right: 10%;
         height: 70%;   
     }
-    
+
     #Generatebtn{
         border-radius: 3px;
         margin: 0%;
