@@ -1,8 +1,11 @@
+
 body {
    
     font-family: "Poppins", sans-serif;
     display: flex;
     background-color: #dad8db ;
+    padding-left:  353px;
+    margin-top: 30px;
     padding-left:  413px;
     margin-top: 200px;
 
@@ -13,6 +16,7 @@ body {
     margin-top: 0px;
 
 
+
 }
 #btn{
     background-color: pink;
@@ -20,7 +24,13 @@ body {
 }
 .container {
     text-align: center;
+
 }.row-column-controls {
+
+}
+
+.row-column-controls {
+
     margin: 10px 0;
    
 }
@@ -32,7 +42,6 @@ label {
 input {
     text-align: center;
     border-radius: 10px;
-    
     border:solid 4px  #10b981; ;
     width: 50px;
     padding: 4px 4px;
@@ -44,12 +53,7 @@ input {
     justify-content: space-around;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    width: 70%;
-    padding-left: 20px;
-    height: 95%;
-    background-color:white;
-    border: 2rem solid #161717;
+    padding-left: 30px;
     border-radius: 1rem;
 }
 #header{
@@ -60,16 +64,24 @@ input {
 #Generatebtn{
     border-radius: 16px;
     margin: 1rem auto;
-    /* display: inline; */
-    background-color: #10b981;
+     display: inline; 
+     background-color: #10b981;
     width: 150px;
     height: 40px;
     font-size: 15px;
     font-weight: 700;
-    padding: 4px 4px;
-    border-radius: 4px;
+    padding: 4px 4px; 
+     border-radius: 4px;
     border: none;
    margin-left: 80px;
+    background-color: #10b981;
+    width: 130px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 4px 4px;
+     border: none;
+     color: white;
     
 }
 
@@ -95,8 +107,8 @@ td[contenteditable="true"]:empty:before {
     border: none;
 
  }
- #addBtn{
-    background-color: #10b981;
+ #addBtn{ 
+     background-color: #10b981;
     color: white;
     border-radius: 10px;
     height: 30px;
@@ -127,12 +139,17 @@ td[contenteditable="true"]:empty:before {
     .content {
         flex-wrap: wrap;
         flex-direction: row;
-        width: 70%;
-        padding-left: 10%;
-        padding-right: 10%;
-        height: 70%;   
-    }
-    
+
+        
+        justify-content: center;
+        width: 100%;
+        padding-left: 60px;
+        height: 95%;
+        background-color: #dad8db;
+        border: 2rem solid #161717; 
+         border-radius: 1rem;
+    } 
+
     #Generatebtn{
         border-radius: 3px;
         margin: 0%;
@@ -146,13 +163,18 @@ td[contenteditable="true"]:empty:before {
     #header{
         padding-bottom: 0px;
        font-size: smaller;
-    }
+    
+} 
+
+
+
+
+ @media screen and (min-width:600px) and (max-width:800px){
     .columns{
         padding-bottom: 60px;
     }
     
 }
-
 @media screen and (min-width:600px) and (max-width:800px){
     body {
         margin: 0px;
@@ -168,7 +190,6 @@ td[contenteditable="true"]:empty:before {
         padding-right: 10%;
         height: 70%;
     }
-
     #Generatebtn{
         border-radius: 3px;
         margin: 0%;
@@ -178,12 +199,11 @@ td[contenteditable="true"]:empty:before {
         border-radius: 1px;
         padding-left: 0px;
     }
-
     #header{
         padding-bottom: 10px;
        font-size: small;
-    }
-    
+    }  
+} 
 }
 
 
@@ -205,8 +225,15 @@ td[contenteditable="true"]:empty:before {
 
 
 
-    
 
 
+
+
+
+
+
     
+
+>>>>>>> 2ca06f9d3e369acb0bf78bd27aabf7d78bea2ce7
+
 
