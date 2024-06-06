@@ -59,3 +59,41 @@ function saveTable() {
     localStorage.setItem('tableData', JSON.stringify(tableData));
 }
 saveTable(); 
+
+function loadTableData() {
+    const tableData = localStorage.getItem('tableData');
+    if (tableData) {
+        const table = document.getElementById('dynamicTable');
+        table.innerHTML = '';
+        const rows = JSON.parse(tableData);
+        const rowMap = {};
+        for (const cell of rows) {
+            if (!rowMap[cell.row]) {
+                rowMap[cell.row] = table.insertRow();
+            }
+            const cellElement = rowMap[cell.row].insertCell();
+            cellElement.textContent = cell.value;
+        }
+    }
+}
+function downloadCsv() {
+    const table = document.getElementById('dynamicTable');
+    const csv = [];
+    for (let i = 0; i < table.rows.length; i++) {
+        const row = [];
+        for (let j = 0; j < table.rows[i].cells.length; j++) {
+            row.push(table.rows[i].cells[j].textContent);
+        }
+        csv.push(row.join(','));
+    }
+    const csvString = csv.join('\n');
+    const link = document.createElement('a');
+    link.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvString);
+    link.download = 'table.csv';
+    link.click();
+}
+
+// Call the function when the page loads
+window.onload = function() {
+    loadTableData();
+};
