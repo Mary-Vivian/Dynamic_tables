@@ -14,17 +14,13 @@ body {
 
 
 }
-#button{
-    margin-top: 200px;
-    padding-top: 10px;
+#btn{
+    background-color: pink;
+    padding-right: 300px;
 }
 .container {
     text-align: center;
-}
-.controls{
-
-} 
-.row-column-controls {
+}.row-column-controls {
     margin: 10px 0;
    
 }
