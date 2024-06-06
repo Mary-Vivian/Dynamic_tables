@@ -46,6 +46,15 @@ function deleteColumn() {
             table.rows[i].deleteCell(-1);
         }
     }
-    saveTable(); // Call saveTable() after deleting a column
+    
 }
-
+function saveTable() {
+    const table = document.getElementById('dynamicTable');
+    const tableData = Array.from(table.rows).map(row => Array.from(row.cells).map(cell => ({
+        value: cell.textContent,
+        row: row.rowIndex,
+        column: cell.cellIndex
+    }))).flat();
+    localStorage.setItem('tableData', JSON.stringify(tableData));
+}
+saveTable(); 
