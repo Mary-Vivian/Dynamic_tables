@@ -1,10 +1,10 @@
-body {
+ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     display: flex;
     background-color:  #1f2937;
     background-color: #dad8db ;
-    padding-left:  160px;
+    padding-left:  353px;
     margin-top: 30px;
 
 }
@@ -54,14 +54,14 @@ input {
 #Generatebtn{
     border-radius: 16px;
     margin: 1rem auto;
-    /* display: inline; */
-    background-color: #10b981;
+     display: inline; 
+     background-color: #10b981;
     width: 150px;
     height: 40px;
     font-size: 15px;
     font-weight: 700;
-    padding: 4px 4px;
-    border-radius: 4px;
+    padding: 4px 4px; 
+     border-radius: 4px;
     border: none;
    margin-left: 80px;
     
@@ -89,8 +89,8 @@ td[contenteditable="true"]:empty:before {
     border: none;
 
  }
- #addBtn{
-    background-color: #10b981;
+ #addBtn{ 
+     background-color: #10b981;
     color: white;
     border-radius: 10px;
     height: 30px;
@@ -128,8 +128,8 @@ td[contenteditable="true"]:empty:before {
         padding-left: 60px;
         height: 95%;
         background-color: #dad8db;
-        /* border: 2rem solid #161717; */
-        border-radius: 1rem;
+        border: 2rem solid #161717; 
+         border-radius: 1rem;
     } 
 
     #Generatebtn{
@@ -146,12 +146,12 @@ td[contenteditable="true"]:empty:before {
         padding-bottom: 0px;
        font-size: smaller;
     }
-}
+} 
 
 
 
 
-@media screen and (min-width:600px) and (max-width:800px){
+ @media screen and (min-width:600px) and (max-width:800px){
     body {
         margin: 0px;
         padding-left:  10%;
@@ -182,29 +182,6 @@ td[contenteditable="true"]:empty:before {
        font-size: small;
     }
     
-}
+} 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    
 
