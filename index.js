@@ -79,38 +79,71 @@ function hideButtons() {
 document.addEventListener('DOMContentLoaded', function() {
     loadTable();
 });
-function saveTable() {
-    let tableData = [];
-    const table = document.getElementById('dynamicTable');
-    for (let i = 0; i < table.rows.length; i++) {
-        for (let j = 0; j < table.rows[i].cells.length; j++) {
-            tableData.push({
-                value: table.rows[i].cells[j].innerText,
-                row: i,
-                column: j
-            });
-        }
-    }
-    localStorage.setItem('tableData', JSON.stringify(tableData));
-}
+// function saveTable() {
+//     const tableData = [];
+//     const table = document.getElementById('dynamicTable');
+//     for (let i = 0; i < table.rows.length; i++) {
+//         for (let j = 0; j < table.rows[i].cells.length; j++) {
+//             tableData.push({
+//                 value: table.rows[i].cells[j].innerText,
+//                 row: i,
+//                 column: j
+//             });
+//         }
+//     }
+//     localStorage.setItem('tableData', JSON.stringify(tableData));
+// }
+
+// function updateTableItem(oldRow, oldColumn, newRow, newColumn, value) {
+//     let tableData = JSON.parse(localStorage.getItem('tableData')) || [];
+//     tableData = tableData.map((item) => {
+//         if (item.row === oldRow && item.column === oldColumn) {
+//             return { value, row: oldRow, column: oldColumn };
+//         }
+//         return item;
+//     });
+//     localStorage.setItem('tableData', JSON.stringify(tableData));
+// }
+
+// function removeTableItem(row, column) {
+//     let tableData = JSON.parse(localStorage.getItem('tableData')) || [];
+//     tableData = tableData.filter((item) => item.row !== row || item.column !== column);
+//     localStorage.setItem('tableData', JSON.stringify(tableData));
+// }
+
+// function clearTable() {
+//     localStorage.removeItem('tableData');
+// }
+// function saveTable() {
+//     const tableData = [];
+//     const table = document.getElementById('dynamicTable');
+//     for (let i = 0; i < table.rows.length; i++) {
+//         for (let j = 0; j < table.rows[i].cells.length; j++) {
+//             tableData.push({
+//                 value: table.rows[i].cells[j].innerText,
+//                 row: i,
+//                 column: j
+//             });
+//         }
+//     }
+//     localStorage.setItem('tableData', JSON.stringify(tableData));
+// }
+
 function loadTable() {
     const tableData = JSON.parse(localStorage.getItem('tableData')) || [];
     const table = document.getElementById('dynamicTable');
     table.innerHTML = '';
-    let maxRows = Math.max(...tableData.map(data => data.row)) + 1;
-    let maxColumns = Math.max(...tableData.map(data => data.column)) + 1;
-    for (let i = 0; i < maxRows; i++) {
+    for (let i = 0; i < tableData.length; i++) {
         const row = table.insertRow();
-        for (let j = 0; j < maxColumns; j++) {
+        for (let j = 0; j < tableData[i].length; j++) {
             const cell = row.insertCell();
-          
-            const cellData = tableData.find(data => data.row === i && data.column === j);
-            if (cellData) {
-                cell.innerText = cellData.value;
-            } else {
-    
-                cell.innerText = '';
-            }
+            cell.innerText = tableData[i][j].value;
         }
     }
 }
+
+// Load the table data when the page loads
+loadTable();
+
+// Save the table data whenever the table changes
+document.getElementById('dynamicTable').addEventListener('DOMSubtreeModified', saveTable);
