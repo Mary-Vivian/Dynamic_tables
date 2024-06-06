@@ -32,4 +32,21 @@ function deleteRow() {
         table.deleteRow(table.rows.length-1);
     }
 }
-
+function addColumn() {
+    const table = document.getElementById('dynamicTable');
+    for (let i = 0; i < table.rows.length; i++) {
+        const newCell = table.rows[i].insertCell();
+        newCell.contentEditable = true;
+        newCell.textContent = "";
+    }
+    saveTable(); // Call saveTable() after adding a column
+}
+function deleteColumn() {
+    const table = document.getElementById('dynamicTable');
+    if (table.rows[0].cells.length > 1) {
+        for (let i = 0; i < table.rows.length; i++) {
+            table.rows[i].deleteCell(-1);
+        }
+    }
+    saveTable(); // Call saveTable() after deleting a column
+}
