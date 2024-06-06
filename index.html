@@ -1,12 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Table Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tables.css">
 </head>
 <body>
-    
+    <h1>Dynamic Table Generator</h1>
+    <label for="rows">Rows:</label><input type="number" id="rows" min="1"><br>
+    <label for="columns">Columns:</label><input type="number" id="columns" min="1"><br>
+    <button onclick="generateTable()">Generate Table</button>
+    <br>
+    <table id="dynamicTable"></table>
+    <br>
+    <button onclick="addRow()">Add Row</button>
+    <button onclick="deleteRow()">Delete Row</button>
+    <button onclick="addColumn()">Add Column</button>
+    <button onclick="deleteColumn()">Delete Column</button>
+    <button onclick="downloadCsv()">Save Table</button>
+    <script src="tables.js"></script>
 </body>
 </html>
+
