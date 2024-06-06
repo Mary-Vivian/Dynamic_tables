@@ -1,12 +1,22 @@
 body {
-    margin: 0;
+   
     font-family: "Poppins", sans-serif;
     display: flex;
-    background-color:  #1f2937;
     background-color: #dad8db ;
-    padding-left:  160px;
-    margin-top: 30px;
+    padding-left:  413px;
+    margin-top: 200px;
 
+}
+.container2{
+    display: grid;
+    padding-left:  413px;
+    margin-top: 0px;
+
+
+}
+#button{
+    margin-top: 200px;
+    padding-top: 10px;
 }
 .container {
     text-align: center;
@@ -105,7 +115,7 @@ td[contenteditable="true"]:empty:before {
     border-radius: 10px;
     border: none;
     height: 30px;
-}
+}columns
 .row-column-controls{
     gap:100px;
 }
@@ -116,7 +126,7 @@ td[contenteditable="true"]:empty:before {
         margin: 2px;
         padding-left:  10%;
         padding-right: 10%;
-        margin-top: 0px;
+        margin-top: 50px;
     }
     .content {
         flex-wrap: wrap;
@@ -140,6 +150,9 @@ td[contenteditable="true"]:empty:before {
     #header{
         padding-bottom: 0px;
        font-size: smaller;
+    }
+    .columns{
+        padding-bottom: 60px;
     }
     
 }
