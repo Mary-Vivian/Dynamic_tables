@@ -15,3 +15,5 @@ function generateTable() {
     saveTable(); // Call saveTable() after generating the table
 }
 
+
+
