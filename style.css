@@ -1,17 +1,11 @@
-<<<<<<< HEAD
- body {
-    margin: 0;
-=======
+
 body {
    
->>>>>>> 2ca06f9d3e369acb0bf78bd27aabf7d78bea2ce7
     font-family: "Poppins", sans-serif;
     display: flex;
     background-color: #dad8db ;
-<<<<<<< HEAD
     padding-left:  353px;
     margin-top: 30px;
-=======
     padding-left:  413px;
     margin-top: 200px;
 
@@ -20,7 +14,7 @@ body {
     display: grid;
     padding-left:  413px;
     margin-top: 0px;
->>>>>>> 2ca06f9d3e369acb0bf78bd27aabf7d78bea2ce7
+
 
 
 }
@@ -66,7 +60,6 @@ input {
 #Generatebtn{
     border-radius: 16px;
     margin: 1rem auto;
-<<<<<<< HEAD
      display: inline; 
      background-color: #10b981;
     width: 150px;
@@ -77,7 +70,6 @@ input {
      border-radius: 4px;
     border: none;
    margin-left: 80px;
-=======
     background-color: #10b981;
     width: 130px;
     height: 40px;
@@ -86,8 +78,6 @@ input {
     padding: 4px 4px;
      border: none;
      color: white;
-
->>>>>>> 2ca06f9d3e369acb0bf78bd27aabf7d78bea2ce7
     
 }
 
@@ -169,22 +159,19 @@ td[contenteditable="true"]:empty:before {
     #header{
         padding-bottom: 0px;
        font-size: smaller;
-    }
-<<<<<<< HEAD
+    
 } 
 
 
 
 
  @media screen and (min-width:600px) and (max-width:800px){
-=======
     .columns{
         padding-bottom: 60px;
     }
     
 }
 @media screen and (min-width:600px) and (max-width:800px){
->>>>>>> 2ca06f9d3e369acb0bf78bd27aabf7d78bea2ce7
     body {
         margin: 0px;
         padding-left:  10%;
@@ -211,11 +198,8 @@ td[contenteditable="true"]:empty:before {
     #header{
         padding-bottom: 10px;
        font-size: small;
-    }
-<<<<<<< HEAD
-    
+    }  
 } 
-=======
 }
 
 
