@@ -12,7 +12,9 @@ function generateTable() {
             cell.textContent = "";
         }
     }
-    saveTable(); // Call saveTable() after generating the table
+    const controlButtons=document.getElementById('controlButtons');
+    controlButtons.style.display='block'
+    saveTable(); 
 }
 
 function addRow() {
@@ -96,4 +98,7 @@ function downloadCsv() {
 // Call the function when the page loads
 window.onload = function() {
     loadTableData();
+    const controlButtons=document.querySelectorAll('controlButtons')
+    controlButtons.style.display = 'none'; 
+    controlButtons.style.display = 'block';
 };
